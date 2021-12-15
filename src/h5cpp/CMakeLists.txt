@@ -37,7 +37,7 @@ if(H5CPP_WITH_BOOST)
 else()
   if(CMAKE_CXX_COMPILER_VERSION VERSION_LESS 9.1 AND CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
     # Link stdc++fs or c++experimental to get std::experimental::filesystem when necessary
-    list(APPEND H5CPP_LINKS stdc++fs>)
+    list(APPEND H5CPP_LINKS stdc++fs)
   elseif(CMAKE_CXX_COMPILER_VERSION VERSION_LESS 11 AND CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang")
     list(APPEND H5CPP_LINKS c++fs)
   else()
